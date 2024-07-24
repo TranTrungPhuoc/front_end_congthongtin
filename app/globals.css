@@ -32,3 +32,14 @@ body {
   }
 }
 
+/* header top */
+.header-top-menu-area {
+  background: #0e3d4b;
+  padding: 12px 0;
+}
+.header-top-menu {
+  color: #ffc600;
+}
+.header-top-menu-socila-icon ul li svg:hover {
+  color: #ffc600;
+}
