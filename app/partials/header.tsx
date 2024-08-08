@@ -1,4 +1,5 @@
 "use client";
+import React from 'react';
 import Container from '@mui/material/Container';
 import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Unstable_Grid2';
@@ -6,6 +7,16 @@ import Paper from '@mui/material/Paper';
 import SvgIcon from '@mui/material/SvgIcon';
 import Link from 'next/link'
 import Image from 'next/image';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Box from '@mui/material/Box';
+import MenuIcon from '@mui/icons-material/Menu';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 // import imgProduct from "../imgs/img3_productHomeListProducts.png";
 
 export default function Header() {
@@ -16,6 +27,18 @@ export default function Header() {
         textAlign: 'center',
         color: theme.palette.text.secondary,
     }));
+//     const Navbar = () => {
+//     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  
+//     const handleMenu = (event: React.MouseEvent<HTMLButtonElement>) => {
+//         setAnchorEl(event.currentTarget);
+//     };
+  
+//     const handleClose = () => {
+//         setAnchorEl(null);
+//     };
+// }
+    
     return (
         <header>
             <div className='header-top-menu-area'>
@@ -95,14 +118,78 @@ export default function Header() {
                     <Grid container spacing={2}>
                         <Grid xs={3}>
                             <Link href="#">
-                                
+                                <Image className='text-center'
+                                    src="/imgs/header-logo.png"
+                                    alt="Description of image"
+                                    width={178}
+                                    height={68}
+                                />
                             </Link>
                         </Grid>
                         <Grid xs={6}>
-                            <Item>xs=6</Item>
+                            <div className="header-menu inline-block text-center	">
+                                <ul>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            Home
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-down">
+                                                <path d="m6 9 6 6 6-6"/>
+                                            </svg>
+                                        </Link>
+                                    </li>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            About
+                                        </Link>
+                                    </li>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            Service
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-down">
+                                                <path d="m6 9 6 6 6-6"/>
+                                            </svg>
+                                        </Link>
+                                    </li>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            Blog
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-down">
+                                                <path d="m6 9 6 6 6-6"/>
+                                            </svg>
+                                        </Link>
+                                    </li>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            Pages
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-chevron-down">
+                                                <path d="m6 9 6 6 6-6"/>
+                                            </svg>
+                                        </Link>
+                                    </li>
+                                    <li className='inline-block mr-5'>
+                                        <Link href="#" className='flex items-center py-10 color-green'>
+                                            Contact
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </Grid>
-                        <Grid xs={3}>
-                            <Item>xs=3</Item>
+                        <Grid xs={3} className="flex items-center">
+                            <div className="header-Shop-card mr-20">
+                                <Link href="#" className='inline-block'>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" className="bi bi-cart4 color-yellow relative after:absolute " viewBox="0 0 16 16">
+                                        <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                                    </svg>
+                                </Link>
+                            </div>
+                            <div className="header-btn inline-block no-underline text-lg py-3.5 px-8 rounded relative z-1 overflow-hidden">
+                                <Link href="#" className='flex items-center text-white'>
+                                    About us
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" className="bi bi-arrow-right ml-0.5" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                                    </svg>
+                                </Link>
+                            </div>
                         </Grid>
                     </Grid>
                 </Container>
@@ -110,3 +197,4 @@ export default function Header() {
         </header>
     )
 }
+

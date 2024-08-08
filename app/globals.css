@@ -43,3 +43,29 @@ body {
 .header-top-menu-socila-icon ul li svg:hover {
   color: #ffc600;
 }
+.header-menu-area::before {
+  position: absolute;
+  content: "";
+  height: 147%;
+  width: 30%;
+  top: -49px;
+  left: 0;
+  background: #ffb400;
+  z-index: -1;
+}
+
+.color-yellow {
+  color: #ffc600;
+}
+
+.color-green {
+  color: #0e3d4b;
+}
+
+.header-btn {
+  background: #0e3d4b;
+}
+
+.header-btn:hover {
+  background: #ffb400;
+}
